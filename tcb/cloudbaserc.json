@@ -11,8 +11,9 @@
             "servicePath": "/",
             "localPath": "./",
             "uploadType": "package",
-            "containerPort": 80,
+            "containerPort": 8080,
             "envVariables": {
+              "SERVER_PORT": 8080
             },
             "volumeMounts": {
               "/data/www/codefever-community/git-storage": "codefever-cfs"
