@@ -1,0 +1,32 @@
+{
+    "version": "2.0",
+    "envId": "{{env.ENV_ID}}",
+    "framework": {
+      "name": "codefever",
+      "plugins": {
+        "client": {
+          "use": "@cloudbase/framework-plugin-container",
+          "inputs": {
+            "serviceName": "codefever",
+            "servicePath": "/",
+            "localPath": "./",
+            "uploadType": "package",
+            "containerPort": 80,
+            "envVariables": {
+            },
+            "volumeMounts": {
+              "/data/www/codefever-community/git-storage": "codefever-cfs"
+            }
+          }
+        }
+      },
+      "requirement": {
+        "addons": [
+          {
+            "type": "CFS",
+            "name": "codefever-cfs"
+          }
+        ]
+      }
+    }
+  }
